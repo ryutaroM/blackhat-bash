@@ -9,8 +9,8 @@ info:
 http:
   - method: GET
     path:
-      - "{{BASEURL}}/backups/acme-hyper-branding/.git/HEAD"
-      - "{{BASEURL}}/backups/acme-impact-alliance/.git/HEAD"
+      - "{{BASEURL}}/backup/acme-hyper-branding/.git/HEAD"
+      - "{{BASEURL}}/backup/acme-impact-alliance/.git/HEAD"
     matchers:
       - type: word
         words:
