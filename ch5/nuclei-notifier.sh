@@ -8,7 +8,7 @@ SMTP_PORT="1025"
 
 for ip_addres in "$@"; do
     echo "Testing ${ip_addres} with Nuclei"
-    result=$(nuclei -u "${ip_addres}" -silent -serverity medium,high,critical)
+    result=$(nuclei -u "${ip_addres}" -silent -severity medium,high,critical)
 
     if [[ -n "${result}" ]]; then
         while read -r l; do
