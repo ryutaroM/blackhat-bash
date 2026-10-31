@@ -17,7 +17,7 @@ for ip_addres in "$@"; do
 
             echo "Sending an email with the findings ${template} ${url}"
 
-            sendmail \
+            sendemail \
               -f "${FROM_ADDR}" \
               -t "${TO_ADDR}" \
               -u "[Nuclei] Vulnerability Found!" \
