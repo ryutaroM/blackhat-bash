@@ -5,7 +5,7 @@ read -p 'Port: ' port
 
 while true; do
     read -p '$ ' raw_cmd
-    cmd=$(printf %s "${raw_cmd}" | jq -sRr @url)
+    cmd=$(printf %s "${raw_cmd}" | jq -sRr @uri)
     resp=$(curl -s -w "\n%{http_code}" \
     -o - "http://${host}:${port}/webshell/${cmd}")
     http_code=$(tail -n1 <<< "$resp")
