@@ -5,4 +5,4 @@ while read -r f; do
     if [[ -n ${match} ]]; then
         echo "${match}" >> "${OUT}"
     fi
-done < <(find /tmp -maxdepth 1 -type f　! -name "${OUT}")
+done < <(find /tmp -maxdepth 1 -type f　! -name "$(basename "${OUT}")")
